@@ -15,6 +15,16 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
 import androidx.core.view.ViewCompat
 
+/**
+ * Primary is the base color, used for main components like prominent buttons,
+ * active states, and the tint of elevated surfaces.
+ *
+ * The secondary key color is used for less prominent components in the UI,
+ * such as filter chips, and expands the opportunity for color expression.
+ *
+ * The tertiary key color is used to derive the roles of contrasting accents
+ * that can be used to balance primary and secondary colors or bring enhanced attention to an element.
+ */
 private val DarkColorScheme = darkColorScheme(
     primary = Purple80,
     secondary = PurpleGrey80,

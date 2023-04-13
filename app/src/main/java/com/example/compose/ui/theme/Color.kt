@@ -1,5 +1,11 @@
 package com.example.compose.ui.theme
 
+import android.provider.CalendarContract
+import androidx.compose.material3.LocalContentColor
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.graphics.Color
 
 val Purple80 = Color(0xFFD0BCFF)
@@ -9,3 +15,15 @@ val Pink80 = Color(0xFFEFB8C8)
 val Purple40 = Color(0xFF6650a4)
 val PurpleGrey40 = Color(0xFF625b71)
 val Pink40 = Color(0xFF7D5260)
+
+val CalendarContract.Colors.tertiary: Color
+    @Composable
+    get() = Color.Blue
+
+@Composable
+fun MediumEmphasisText(text: String){
+    CompositionLocalProvider(LocalContentColor provides MaterialTheme.colorScheme.onSurfaceVariant) {
+        Text(text = text,
+            color = MaterialTheme.colorScheme.primary)
+    }
+}

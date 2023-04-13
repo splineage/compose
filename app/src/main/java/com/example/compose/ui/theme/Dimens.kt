@@ -1,5 +1,6 @@
-package com.example.compose
+package com.example.compose.ui.theme
 
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 
@@ -9,6 +10,9 @@ import androidx.compose.ui.unit.dp
  * @created 2023/04/12 5:04 PM
  * @desc
  */
+
+val MaterialTheme.dimens: Dimens
+    get() = Dimens()
 
 class Dimens(
     /** 0dp */
