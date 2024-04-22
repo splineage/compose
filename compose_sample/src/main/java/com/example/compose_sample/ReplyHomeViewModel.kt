@@ -35,6 +35,7 @@ class ReplyHomeViewModel(private val emailsRepository: EmailsRepository = Emails
                     _uiState.value = ReplyHomeUIState(error = ex.message)
                 }
                 .collect{ emails ->
+
                     _uiState.value = ReplyHomeUIState(emails = emails, selectedEmail = emails.first())
                 }
         }
